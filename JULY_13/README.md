@@ -142,6 +142,8 @@ The application allows the user to choose an option from a menu, provide input, 
 
 ![image alt](https://github.com/Nishugit-2004/AI_AUTOMATION_BOOTCAMP/blob/41350a6e382f58133d435ee06558b5974e95fd9d/JULY_13/j131.JPG)
 
+![image alt](https://github.com/Nishugit-2004/AI_AUTOMATION_BOOTCAMP/blob/0dddf597303cce2975948d533e9227cfb3b6c5f9/JULY_13/j132.JPG)
+
 # Project Workflow
 
 User Input
