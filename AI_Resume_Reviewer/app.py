@@ -1,26 +1,39 @@
-from utils.pdf_loader import load_pdf
+from services.resume_service import ResumeService
+from services.ats_service import ATSService
 
-from chains import summary_chain
+resume_service = ResumeService()
+ats_service = ATSService()
 
-resume_text = load_pdf("data/resume.pdf")
-
-resume = summary_chain.invoke(
-    {
-        "resume": resume_text
-    }
+resume = resume_service.summarize_resume(
+    "data/resume.pdf"
 )
 
-print("\nCandidate Name")
-print(resume.name)
+report = ats_service.analyze_resume(
+    resume
+)
 
-print("\nEducation")
-print(resume.education)
+print("=" * 60)
+print("RESUME INFORMATION")
+print("=" * 60)
 
-print("\nSkills")
-print(resume.skills)
+print(resume)
 
-print("\nProjects")
-print(resume.projects)
+print()
 
-print("\nExperience")
-print(resume.experience)
+print("=" * 60)
+print("ATS REPORT")
+print("=" * 60)
+
+print("\nATS Score:", report.ats_score)
+
+print("\nStrengths:")
+for item in report.strengths:
+    print("-", item)
+
+print("\nMissing Skills:")
+for item in report.missing_skills:
+    print("-", item)
+
+print("\nRecommendations:")
+for item in report.recommendations:
+    print("-", item)

@@ -1,0 +1,78 @@
+2026-07-17 21:09:57,337 | INFO | GET /docs 0.0 sec
+2026-07-17 21:09:57,692 | INFO | GET /openapi.json 0.0 sec
+2026-07-17 21:11:12,316 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:11:14,884 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:11:14,897 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:11:16,829 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:11:16,832 | INFO | POST /resume/analyze 5.0 sec
+2026-07-17 21:16:28,432 | INFO | GET /docs 0.0 sec
+2026-07-17 21:16:28,683 | INFO | GET /openapi.json 0.01 sec
+2026-07-17 21:16:43,660 | ERROR | name 'file' is not defined
+2026-07-17 21:22:40,855 | INFO | GET /docs 0.0 sec
+2026-07-17 21:22:40,991 | INFO | GET /openapi.json 0.01 sec
+2026-07-17 21:22:54,987 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:22:57,863 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:22:57,876 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:22:57,885 | ERROR | Server disconnected without sending a response.
+2026-07-17 21:23:26,226 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:23:28,789 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:23:28,789 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:23:30,620 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:23:30,636 | ERROR | 'jd'
+2026-07-17 21:33:13,389 | INFO | GET /docs 0.0 sec
+2026-07-17 21:33:13,581 | INFO | GET /openapi.json 0.03 sec
+2026-07-17 21:33:30,436 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:33:33,438 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:33:33,455 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:33:35,447 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:33:35,462 | ERROR | 'jd'
+2026-07-17 21:36:11,915 | INFO | GET /docs 0.0 sec
+2026-07-17 21:36:12,115 | INFO | GET /openapi.json 0.03 sec
+2026-07-17 21:36:25,689 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:36:28,504 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:36:28,582 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:36:29,937 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:36:29,947 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:36:31,471 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:36:31,487 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 21:36:33,419 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 21:36:33,431 | INFO | POST /resume/analyze 8.26 sec
+2026-07-17 22:06:15,133 | INFO | GET /docs 0.0 sec
+2026-07-17 22:06:15,286 | INFO | GET /openapi.json 0.04 sec
+2026-07-17 22:06:27,963 | ERROR | name 'chat_service' is not defined
+2026-07-17 22:07:10,875 | INFO | GET /docs 0.0 sec
+2026-07-17 22:07:11,059 | INFO | GET /openapi.json 0.05 sec
+2026-07-17 22:07:22,900 | ERROR | name 'chat_service' is not defined
+2026-07-17 22:10:19,324 | INFO | GET /docs 0.0 sec
+2026-07-17 22:10:19,528 | INFO | GET /openapi.json 0.06 sec
+2026-07-17 22:10:26,363 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:10:27,331 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:10:27,339 | ERROR | 1 validation error for ChatResponse
+answer
+  Input should be a valid string [type=string_type, input_value=[{'type': 'text', 'text':...3c90xpV8WosnDPVvySWs'}}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-07-17 22:15:13,484 | INFO | GET /docs 0.0 sec
+2026-07-17 22:15:13,710 | INFO | GET /openapi.json 0.04 sec
+2026-07-17 22:15:18,845 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:15:19,674 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:15:19,681 | INFO | POST /chat 0.86 sec
+2026-07-17 22:17:58,969 | INFO | GET /docs 0.0 sec
+2026-07-17 22:17:59,161 | INFO | GET /openapi.json 0.05 sec
+2026-07-17 22:18:04,087 | ERROR | 'ChatRequest' object has no attribute 'session_id'
+2026-07-17 22:19:32,202 | INFO | GET /docs 0.0 sec
+2026-07-17 22:19:32,334 | INFO | GET /openapi.json 0.03 sec
+2026-07-17 22:19:36,441 | INFO | POST /chat 0.01 sec
+2026-07-17 22:21:44,850 | INFO | GET /docs 0.0 sec
+2026-07-17 22:21:44,945 | INFO | GET /openapi.json 0.02 sec
+2026-07-17 22:22:16,186 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:22:18,780 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:22:18,823 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:22:20,209 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:22:20,220 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:22:21,849 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:22:21,860 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:22:24,000 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:22:24,007 | INFO | POST /resume/analyze 8.22 sec
+2026-07-17 22:23:23,768 | INFO | AFC is enabled with max remote calls: 10.
+2026-07-17 22:23:25,031 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-07-17 22:23:25,034 | INFO | POST /chat 1.27 sec
