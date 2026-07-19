@@ -49,16 +49,29 @@ async def analyze_resume(
             detail="Job Description must be a PDF."
         )
 
-    os.makedirs("uploads", exist_ok=True)
-    
-    resume_path = f"uploads/{resume.filename}"
-    job_description_path = f"uploads/{job_description.filename}"
+    # Create uploads directory using an absolute path
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    UPLOAD_DIR = os.path.join(BASE_DIR, "..", "uploads")
+    UPLOAD_DIR = os.path.abspath(UPLOAD_DIR)
+
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+    print("Current Working Directory:", os.getcwd())
+    print("Base Directory:", BASE_DIR)
+    print("Upload Directory:", UPLOAD_DIR)
+    print("Uploads Exists:", os.path.exists(UPLOAD_DIR))
+
+    resume_path = os.path.join(UPLOAD_DIR, resume.filename)
+    job_description_path = os.path.join(UPLOAD_DIR, job_description.filename)
 
     with open(resume_path, "wb") as buffer:
         shutil.copyfileobj(resume.file, buffer)
 
     with open(job_description_path, "wb") as buffer:
         shutil.copyfileobj(job_description.file, buffer)
+
+    print("Resume saved to:", resume_path)
+    print("JD saved to:", job_description_path)
 
     try:
 
