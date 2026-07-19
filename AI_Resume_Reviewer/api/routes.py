@@ -49,6 +49,8 @@ async def analyze_resume(
             detail="Job Description must be a PDF."
         )
 
+    os.makedirs("uploads", exist_ok=True)
+    
     resume_path = f"uploads/{resume.filename}"
     job_description_path = f"uploads/{job_description.filename}"
 
