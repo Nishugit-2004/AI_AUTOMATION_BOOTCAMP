@@ -1,6 +1,16 @@
 from typing import List, Any
 from pydantic import BaseModel, Field
 
+class ResumeValidation(BaseModel):
+    is_resume: bool
+    confidence: float
+    reason: str
+    
+class JobDescriptionValidation(BaseModel):
+    is_job_description: bool
+    confidence: float
+    reason: str
+
 class ResumeInfo(BaseModel):
 
     name: str = Field(description="Candidate name")
@@ -103,3 +113,27 @@ class ResumeAnalysisResponse(BaseModel):
     match: MatchReport
 
     ats: ATSReport
+    
+    
+# ==========================================================
+# Resume Improvement Score Models
+# ==========================================================
+
+class ResumeCategoryScores(BaseModel):
+    technical_skills: str
+    projects: str
+    experience: str
+    education: str
+    formatting: str
+    ai_readiness: str
+
+
+class ResumeScoreResponse(BaseModel):
+    overall_grade: str
+    overall_score: int
+
+    category_scores: ResumeCategoryScores
+
+    strengths: list[str]
+
+    improvements: list[str]

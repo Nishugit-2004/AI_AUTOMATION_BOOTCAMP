@@ -1,10 +1,57 @@
-from graph.state import HiringState
 
+from graph.state import HiringState
+from chains import resume_validation_chain, jd_validation_chain
+from utils.pdf_loader import load_pdf
 from tools.resume_tool import analyze_resume_tool
 from tools.ats_tool import ats_tool
 from tools.jd_tool import jd_tool
 from tools.matching_tool import matching_tool
 
+def resume_validation_node(state: HiringState):
+
+    print("Running Resume Validation Node")
+
+    resume_text = load_pdf(state["resume_path"])
+
+    validation = resume_validation_chain.invoke(
+        {
+            "resume": resume_text
+        }
+    )
+    
+    print(validation)
+
+    if not validation.is_resume:
+        print(validation.reason)
+        raise ValueError(
+            f"Invalid Resume: {validation.reason}"
+        )
+
+    return state
+
+def jd_validation_node(state: HiringState):
+
+    print("Running JD Validation Node")
+
+    jd_text = load_pdf(state["job_description_path"])
+
+    validation = jd_validation_chain.invoke(
+        {
+            "job_description": jd_text
+        }
+    )
+
+    print(validation)
+
+    if not validation.is_job_description:
+
+        print(validation.reason)
+
+        raise ValueError(
+            f"Invalid Job Description: {validation.reason}"
+        )
+
+    return state
 
 def resume_node(state: HiringState):
 
