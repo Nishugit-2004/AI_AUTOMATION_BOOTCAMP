@@ -15,12 +15,12 @@ import { chatWithAI } from "@/services/api";
 export default function ChatBox() {
   const { analysis } = useSession();
 
-  const [messages, setMessages] = useState([
-    {
-      sender: "ai" as const,
-      message: "Hello! 👋 Ask me anything about your resume.",
-    },
-  ]);
+  type Message = {
+    sender: "ai" | "user";
+    message: string;
+  };
+
+  const [messages, setMessages] = useState<Message[]>([]);
 
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
