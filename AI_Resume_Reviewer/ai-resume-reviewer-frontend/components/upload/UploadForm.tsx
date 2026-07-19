@@ -44,7 +44,9 @@ export default function UploadForm() {
                 jobDescription
             );
 
-            console.log(result);
+            console.log("API Result:", result);
+
+            toast.success("API Success");
 
             setAnalysis(result);
 
@@ -58,14 +60,19 @@ export default function UploadForm() {
         
         catch (error: any) {
 
-            console.error(error);
+            console.error("Full Error:", error);
 
-            const message =
+            console.error("Response:", error?.response);
+
+            console.error("Response Data:", error?.response?.data);
+
+            console.error("Message:", error?.message);
+
+            toast.error(
                 error?.response?.data?.detail ||
-                "Analysis failed. Please try again.";
-
-            toast.error(message);
-
+                error?.message ||
+                "Analysis failed"
+            );
         }        
 
         finally {
