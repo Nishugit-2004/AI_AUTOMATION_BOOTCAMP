@@ -6,9 +6,9 @@ resume_service = ResumeService()
 
 
 @tool
-def analyze_resume_tool(pdf_path: str):
+def analyze_resume_tool(resume_text: str):
     """
-    Analyze a resume PDF and return structured resume information.
+    Analyze resume text and return structured resume information.
     """
 
-    return resume_service.summarize_resume(pdf_path)
+    return resume_service.summarize_resume(resume_text)

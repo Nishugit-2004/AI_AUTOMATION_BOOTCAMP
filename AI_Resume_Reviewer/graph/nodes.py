@@ -7,11 +7,28 @@ from tools.ats_tool import ats_tool
 from tools.jd_tool import jd_tool
 from tools.matching_tool import matching_tool
 
+def document_loader_node(state: HiringState):
+
+    print("Running Document Loader Node")
+
+    # Load Resume only once
+    state["resume_text"] = load_pdf(
+        state["resume_path"]
+    )
+
+    # Load JD only once (if provided)
+    if state.get("job_description_path"):
+        state["jd_text"] = load_pdf(
+            state["job_description_path"]
+        )
+
+    return state
+
 def resume_validation_node(state: HiringState):
 
     print("Running Resume Validation Node")
 
-    resume_text = load_pdf(state["resume_path"])
+    resume_text = state["resume_text"]
 
     validation = resume_validation_chain.invoke(
         {
@@ -33,7 +50,7 @@ def jd_validation_node(state: HiringState):
 
     print("Running JD Validation Node")
 
-    jd_text = load_pdf(state["job_description_path"])
+    jd_text = state["jd_text"]
 
     validation = jd_validation_chain.invoke(
         {
@@ -59,7 +76,7 @@ def resume_node(state: HiringState):
 
     resume = analyze_resume_tool.invoke(
         {
-            "pdf_path": state["resume_path"]
+            "resume_text": state["resume_text"]
         }
     )
 
@@ -88,7 +105,7 @@ def jd_node(state: HiringState):
 
     jd = jd_tool.invoke(
         {
-            "pdf_path": state["job_description_path"]
+            "jd_text": state["jd_text"]
         }
     )
 

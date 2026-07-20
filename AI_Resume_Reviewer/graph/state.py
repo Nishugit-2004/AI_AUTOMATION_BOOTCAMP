@@ -24,3 +24,7 @@ class HiringState(TypedDict, total=False):
     final_report: dict
     
     request_type: str
+    
+    resume_text: str
+
+    jd_text: str

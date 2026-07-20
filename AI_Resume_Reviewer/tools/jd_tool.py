@@ -6,9 +6,9 @@ jd_service = JDService()
 
 
 @tool
-def jd_tool(pdf_path: str):
+def jd_tool(jd_text: str):
     """
-    Extract structured information from a Job Description PDF.
+    Extract structured information from Job Description text.
     """
 
-    return jd_service.extract_job_details(pdf_path)
+    return jd_service.extract_job_details(jd_text)
